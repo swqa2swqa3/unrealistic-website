@@ -1,0 +1,371 @@
+:root {
+  --color-bg: #000000;
+  --color-text: #f5f2ea;
+  --color-muted: #bcb5aa;
+  --color-soft: #9f9a91;
+  --color-border: #292929;
+  --color-border-hover: #6f6a63;
+  --content-narrow: 680px;
+  --content-wide: 1040px;
+  --section-space: 144px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Didot", "Bodoni 72", "Times New Roman", "Noto Serif SC", serif;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 36px;
+  background: rgba(0, 0, 0, 0.86);
+}
+
+.site-logo,
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.site-logo {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav a {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.site-logo:hover,
+.site-nav a:hover {
+  color: var(--color-soft);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 128px 32px 112px;
+  scroll-margin-top: 88px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.hero-content p {
+  margin: 18px 0 0;
+  color: var(--color-muted);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+}
+
+.hero-content .philosophy {
+  margin-top: 36px;
+  color: #d8d2c8;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.hero-content .tagline {
+  color: var(--color-muted);
+}
+
+.enter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 56px;
+  min-width: 112px;
+  min-height: 40px;
+  border: 1px solid var(--color-border-hover);
+  color: #d8d2c8;
+  background: var(--color-bg);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.enter-button:hover {
+  border-color: #aaa39a;
+  color: var(--color-text);
+  background: #080808;
+}
+
+.section {
+  padding: var(--section-space) 32px;
+  background: var(--color-bg);
+  scroll-margin-top: 96px;
+}
+
+.about-content,
+.contact-content {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+}
+
+.works-content {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+}
+
+.philosophy-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  margin: 0 0 48px;
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.about p,
+.contact p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.about .about-cn {
+  margin-top: 28px;
+  color: var(--color-soft);
+  font-size: 17px;
+  letter-spacing: 0.08em;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.work-card {
+  min-height: 260px;
+  padding: 34px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.work-card:hover {
+  border-color: var(--color-border-hover);
+  background: #030303;
+}
+
+.work-card h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.work-card p {
+  margin: 22px 0 0;
+  color: var(--color-soft);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+.manifesto-list {
+  display: grid;
+  gap: 42px;
+}
+
+.manifesto-list p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+.manifesto-list p:first-child {
+  color: #d8d2c8;
+}
+
+.manifesto-list p:last-child {
+  color: var(--color-soft);
+}
+
+.contact {
+  padding-bottom: 104px;
+}
+
+.contact-content {
+  padding-top: 64px;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact a {
+  display: inline-block;
+  margin-top: 32px;
+  color: var(--color-text);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.contact a:hover {
+  color: var(--color-soft);
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px 32px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.site-footer p {
+  margin: 0;
+  color: #6f6a63;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --section-space: 104px;
+  }
+
+  .site-header {
+    padding: 22px 20px;
+  }
+
+  .site-nav {
+    gap: 16px;
+  }
+
+  .site-logo {
+    font-size: 16px;
+  }
+
+  .site-nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 120px 24px 88px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-content .philosophy {
+    font-size: 17px;
+  }
+
+  .section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .section h2 {
+    margin-bottom: 36px;
+    font-size: 20px;
+  }
+
+  .about p,
+  .contact p {
+    font-size: 18px;
+  }
+
+  .about .about-cn {
+    font-size: 15px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: 220px;
+    padding: 28px;
+  }
+
+  .manifesto-list {
+    gap: 34px;
+  }
+
+  .manifesto-list p {
+    font-size: 23px;
+  }
+
+  .contact {
+    padding-bottom: 72px;
+  }
+
+  .contact-content {
+    padding-top: 48px;
+  }
+
+  .contact a {
+    font-size: 14px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 32px 24px;
+    text-align: center;
+  }
+}
